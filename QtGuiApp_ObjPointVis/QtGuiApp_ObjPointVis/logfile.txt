@@ -1,0 +1,12 @@
+dif: 1, 0
+dif: 1, 0
+dif: 1, 0
+dif: 3, 0
+dif: 2, 0
+dif: 30, 2
+dif: 14, 1
+dif: 25, 1
+dif: 21, 2
+dif: 21, 1
+dif: 12, 1
+dif: 4, 0

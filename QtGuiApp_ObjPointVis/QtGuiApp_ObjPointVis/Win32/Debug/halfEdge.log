@@ -1,0 +1,3 @@
+﻿  Uic'ing forms\QtGuiApp_ObjPointVis.ui...
+  File 'C:\Users\hbollar\Desktop\_DrLane_Research\project\QtGuiApp_ObjPointVis\QtGuiApp_ObjPointVis\forms\QtGuiApp_ObjPointVis.ui' is not valid
+C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppCommon.targets(171,5): error MSB6006: "cmd.exe" exited with code 1.

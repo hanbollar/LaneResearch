@@ -1,0 +1,1088 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1284</width>
+    <height>606</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>OpenGLDemo</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="MyListWidget" name="list_currentObjectVertices">
+    <property name="geometry">
+     <rect>
+      <x>1150</x>
+      <y>50</y>
+      <width>101</width>
+      <height>501</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_addByVertexNumber">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>140</y>
+      <width>121</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Add By Num</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox_addByVertexNumber">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>140</y>
+      <width>71</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>999999999</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="title_vertices">
+    <property name="geometry">
+     <rect>
+      <x>1160</x>
+      <y>30</y>
+      <width>71</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>259</width>
+      <height>487</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>All Vertices</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="title_options">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>20</y>
+      <width>61</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Options</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_recenterMyGL">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>320</y>
+      <width>121</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Recenter the View</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_addPoint">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>60</y>
+      <width>121</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Add Point</string>
+    </property>
+   </widget>
+   <widget class="MyGL" name="mygl">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>550</width>
+      <height>550</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>0</width>
+      <height>489</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">width: 200px, height 10px</string>
+    </property>
+   </widget>
+   <widget class="MyListWidget" name="list_currentlySelectedPoints">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>50</y>
+      <width>331</width>
+      <height>501</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="title_selectedPoints">
+    <property name="geometry">
+     <rect>
+      <x>920</x>
+      <y>30</y>
+      <width>91</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>259</width>
+      <height>487</height>
+     </size>
+    </property>
+    <property name="text">
+     <string>Selected Points</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_removePoint">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>100</y>
+      <width>121</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Remove Point</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="button_removeByPointNumber">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>180</y>
+      <width>121</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Remove By Num</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBox_removeByPointNumber">
+    <property name="geometry">
+     <rect>
+      <x>720</x>
+      <y>180</y>
+      <width>71</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>999999999</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_currentlySelectedVertex">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>420</y>
+      <width>161</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Currently Selected Item:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_xPosition">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>440</y>
+      <width>55</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>X:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_yPosition">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>460</y>
+      <width>55</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Y:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_zPosition">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>480</y>
+      <width>55</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Z:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_xPVal">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>440</y>
+      <width>55</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">qproperty-alignment:AlignRight;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_yPVal">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>460</y>
+      <width>55</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">qproperty-alignment:AlignRight;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_zPVal">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>480</y>
+      <width>55</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">qproperty-alignment:AlignRight;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_viewPoints">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>230</y>
+      <width>111</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>View Points</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_viewObjVertices">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>260</y>
+      <width>121</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>View All Vertices</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_viewMesh">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>290</y>
+      <width>121</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>View Mesh</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="checkBox_createPoints">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>390</y>
+      <width>211</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>On: Click to Create Points</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>590</x>
+      <y>509</y>
+      <width>201</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Use Clicking for Movement or
+Press Keys for movement. See 
+Camera Controls for more Info.</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1284</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionLoad_Given_Object"/>
+    <addaction name="actionLoad_ImportantPoints"/>
+    <addaction name="actionSave_ImportantPoints"/>
+    <addaction name="actionQuit"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionCamera_Controls"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <action name="actionQuit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+  <action name="actionCamera_Controls">
+   <property name="text">
+    <string>Camera Controls</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionLoad_ImportantPoints">
+   <property name="text">
+    <string>Load Points</string>
+   </property>
+   <property name="shortcut">
+    <string>P</string>
+   </property>
+  </action>
+  <action name="actionSave_ImportantPoints">
+   <property name="text">
+    <string>Save Points</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionLoad_Given_Object">
+   <property name="text">
+    <string>Load Object</string>
+   </property>
+   <property name="shortcut">
+    <string>O</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>MyGL</class>
+   <extends>QOpenGLWidget</extends>
+   <header>mygl.h</header>
+   <slots>
+    <signal>sig_addVertex(QListWidgetItem*)</signal>
+    <signal>sig_vertexChanged(QListWidgetItem*)</signal>
+    <signal>sig_clearVertexList()</signal>
+    <signal>sig_DisplayPosX(double)</signal>
+    <signal>sig_DisplayPosY(double)</signal>
+    <signal>sig_DisplayPosZ(double)</signal>
+    <signal>sig_removeSelectedVertPoint(QListWidgetItem*)</signal>
+    <signal>sig_clearPointList()</signal>
+    <signal>sig_invalidTxtFileLine(int)</signal>
+    <signal>sig_addPoint(QListWidgetItem*)</signal>
+    <signal>sig_preExistingVertex(int)</signal>
+    <slot>slot_vertexItemClicked(QListWidgetItem*)</slot>
+    <slot>slot_xChangedTo(double)</slot>
+    <slot>slot_yChangedTo(double)</slot>
+    <slot>slot_zChangedTo(double)</slot>
+    <slot>slot_loadFileData(QString)</slot>
+    <slot>slot_recenter()</slot>
+    <slot>slot_removedInterestPoint()</slot>
+    <slot>slot_interestPointItemClicked(QListWidgetItem*)</slot>
+    <slot>slot_highlightVertexById(int)</slot>
+    <slot>slot_loadPointsFromTxt(QString)</slot>
+    <slot>slot_savePointsToTxt(QString)</slot>
+    <slot>slot_removedPoint(QListWidgetItem*)</slot>
+    <slot>slot_viewPointsSet(bool)</slot>
+    <slot>slot_viewObjVertices(bool)</slot>
+    <slot>slot_highlightPointById(int)</slot>
+    <slot>slot_addPointFromVertex()</slot>
+    <slot>slot_viewMesh(bool)</slot>
+    <slot>slot_creatingPoints(bool)</slot>
+   </slots>
+  </customwidget>
+  <customwidget>
+   <class>MyListWidget</class>
+   <extends>QListWidget</extends>
+   <header>mylistwidget.h</header>
+   <slots>
+    <signal>sig_highlightById(int)</signal>
+    <signal>sig_removePoint()</signal>
+    <signal>sig_addVertexAsPoint()</signal>
+    <slot>slot_addItem(QListWidgetItem*)</slot>
+    <slot>slot_selectItem(QListWidgetItem*)</slot>
+    <slot>slot_removeItem(QListWidgetItem*)</slot>
+    <slot>slot_selectItemByIdNum(int)</slot>
+    <slot>slot_highlightItemByRowNum(int)</slot>
+    <slot>slot_selectVertexByIdNum(int)</slot>
+    <slot>slot_selectPointByIdNum(int)</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>MainWindow</sender>
+   <signal>sig_filePathString(QString)</signal>
+   <receiver>mygl</receiver>
+   <slot>slot_loadFileData(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>499</x>
+     <y>306</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>230</x>
+     <y>202</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mygl</sender>
+   <signal>sig_clearVertexList()</signal>
+   <receiver>list_currentObjectVertices</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>230</x>
+     <y>202</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1150</x>
+     <y>238</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mygl</sender>
+   <signal>sig_addVertex(QListWidgetItem*)</signal>
+   <receiver>list_currentObjectVertices</receiver>
+   <slot>slot_addItem(QListWidgetItem*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>230</x>
+     <y>202</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1150</x>
+     <y>238</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>list_currentObjectVertices</sender>
+   <signal>itemClicked(QListWidgetItem*)</signal>
+   <receiver>mygl</receiver>
+   <slot>slot_vertexItemClicked(QListWidgetItem*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1150</x>
+     <y>238</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>230</x>
+     <y>202</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mygl</sender>
+   <signal>sig_vertexChanged(QListWidgetItem*)</signal>
+   <receiver>list_currentObjectVertices</receiver>
+   <slot>slot_selectItem(QListWidgetItem*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>230</x>
+     <y>202</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1150</x>
+     <y>238</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button_recenterMyGL</sender>
+   <signal>clicked()</signal>
+   <receiver>mygl</receiver>
+   <slot>slot_recenter()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>590</x>
+     <y>353</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>230</x>
+     <y>206</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mygl</sender>
+   <signal>sig_addPoint(QListWidgetItem*)</signal>
+   <receiver>list_currentlySelectedPoints</receiver>
+   <slot>slot_addItem(QListWidgetItem*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>294</x>
+     <y>310</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>965</x>
+     <y>326</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mygl</sender>
+   <signal>sig_removeSelectedVertPoint(QListWidgetItem*)</signal>
+   <receiver>list_currentlySelectedPoints</receiver>
+   <slot>slot_removeItem(QListWidgetItem*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>294</x>
+     <y>310</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>845</x>
+     <y>326</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>list_currentlySelectedPoints</sender>
+   <signal>itemClicked(QListWidgetItem*)</signal>
+   <receiver>list_currentObjectVertices</receiver>
+   <slot>clearSelection()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>845</x>
+     <y>326</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1150</x>
+     <y>352</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>list_currentObjectVertices</sender>
+   <signal>itemClicked(QListWidgetItem*)</signal>
+   <receiver>list_currentlySelectedPoints</receiver>
+   <slot>clearSelection()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1150</x>
+     <y>352</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>845</x>
+     <y>326</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>list_currentlySelectedPoints</sender>
+   <signal>itemClicked(QListWidgetItem*)</signal>
+   <receiver>mygl</receiver>
+   <slot>slot_interestPointItemClicked(QListWidgetItem*)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>845</x>
+     <y>326</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>294</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>list_currentObjectVertices</sender>
+   <signal>sig_highlightById(int)</signal>
+   <receiver>mygl</receiver>
+   <slot>slot_highlightVertexById(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1150</x>
+     <y>352</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>294</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MainWindow</sender>
+   <signal>sig_pointsFilePathString(QString)</signal>
+   <receiver>mygl</receiver>
+   <slot>slot_loadPointsFromTxt(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>527</x>
+     <y>302</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>294</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mygl</sender>
+   <signal>sig_clearPointList()</signal>
+   <receiver>list_currentlySelectedPoints</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>294</x>
+     <y>310</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>855</x>
+     <y>326</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>MainWindow</sender>
+   <signal>sig_saveCurrentPointsFilePath(QString)</signal>
+   <receiver>mygl</receiver>
+   <slot>slot_savePointsToTxt(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>527</x>
+     <y>302</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>294</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mygl</sender>
+   <signal>sig_invalidTxtFileLine(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slot_txtFileLoadingError(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>294</x>
+     <y>310</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>527</x>
+     <y>302</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mygl</sender>
+   <signal>sig_DisplayPosX(double)</signal>
+   <receiver>label_xPVal</receiver>
+   <slot>setNum(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>294</x>
+     <y>310</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>647</x>
+     <y>473</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mygl</sender>
+   <signal>sig_DisplayPosY(double)</signal>
+   <receiver>label_yPVal</receiver>
+   <slot>setNum(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>294</x>
+     <y>310</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>647</x>
+     <y>493</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mygl</sender>
+   <signal>sig_DisplayPosZ(double)</signal>
+   <receiver>label_zPVal</receiver>
+   <slot>setNum(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>294</x>
+     <y>310</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>647</x>
+     <y>513</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>list_currentObjectVertices</sender>
+   <signal>currentRowChanged(int)</signal>
+   <receiver>list_currentObjectVertices</receiver>
+   <slot>slot_highlightItemByRowNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1150</x>
+     <y>352</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1150</x>
+     <y>352</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>list_currentlySelectedPoints</sender>
+   <signal>currentRowChanged(int)</signal>
+   <receiver>list_currentlySelectedPoints</receiver>
+   <slot>slot_highlightItemByRowNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>855</x>
+     <y>326</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>855</x>
+     <y>326</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_viewPoints</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>mygl</receiver>
+   <slot>slot_viewPointsSet(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>645</x>
+     <y>265</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>294</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>list_currentlySelectedPoints</sender>
+   <signal>sig_removePoint()</signal>
+   <receiver>mygl</receiver>
+   <slot>slot_removedInterestPoint()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>855</x>
+     <y>326</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>294</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_viewObjVertices</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>mygl</receiver>
+   <slot>slot_viewObjVertices(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>650</x>
+     <y>295</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>294</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>list_currentlySelectedPoints</sender>
+   <signal>sig_highlightById(int)</signal>
+   <receiver>mygl</receiver>
+   <slot>slot_highlightPointById(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>855</x>
+     <y>326</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>294</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>list_currentObjectVertices</sender>
+   <signal>sig_addVertexAsPoint()</signal>
+   <receiver>mygl</receiver>
+   <slot>slot_addPointFromVertex()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1200</x>
+     <y>326</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>294</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button_addPoint</sender>
+   <signal>clicked()</signal>
+   <receiver>mygl</receiver>
+   <slot>slot_addPointFromVertex()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>650</x>
+     <y>99</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>294</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button_removePoint</sender>
+   <signal>clicked()</signal>
+   <receiver>mygl</receiver>
+   <slot>slot_removedInterestPoint()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>650</x>
+     <y>139</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>294</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_addByVertexNumber</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>mygl</receiver>
+   <slot>slot_highlightVertexById(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>755</x>
+     <y>176</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>294</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button_addByVertexNumber</sender>
+   <signal>clicked()</signal>
+   <receiver>mygl</receiver>
+   <slot>slot_addPointFromVertex()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>650</x>
+     <y>179</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>294</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBox_removeByPointNumber</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>mygl</receiver>
+   <slot>slot_highlightPointById(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>755</x>
+     <y>216</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>294</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>button_removeByPointNumber</sender>
+   <signal>clicked()</signal>
+   <receiver>mygl</receiver>
+   <slot>slot_removedInterestPoint()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>650</x>
+     <y>219</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>294</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_viewMesh</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>mygl</receiver>
+   <slot>slot_viewMesh(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>650</x>
+     <y>325</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>294</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mygl</sender>
+   <signal>sig_preExistingVertex(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slot_addedPreExistingPointError(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>294</x>
+     <y>310</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>641</x>
+     <y>302</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_createPoints</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>mygl</receiver>
+   <slot>slot_creatingPoints(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>695</x>
+     <y>425</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>294</x>
+     <y>310</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <signal>sig_filePathString(QString)</signal>
+  <signal>sig_pointsFilePathString(QString)</signal>
+  <signal>sig_saveCurrentPointsFilePath(QString)</signal>
+  <slot>slot_windowClicked()</slot>
+  <slot>slot_txtFileLoadingError(int)</slot>
+  <slot>slot_addedPreExistingPointError(int)</slot>
+ </slots>
+</ui>
